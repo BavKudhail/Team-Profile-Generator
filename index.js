@@ -11,6 +11,7 @@ const fs = require("fs");
 const path = require("path");
 const outputDir = path.resolve(__dirname, "dist");
 const outputPath = path.join(outputDir, "theTeam.html");
+
 // link to create team HTML file
 const createTeamHTML = require("./src/createTeamHTML");
 
@@ -171,4 +172,5 @@ function createHTML() {
   fs.writeFileSync(outputPath, createTeamHTML(teamArr), "utf-8");
 }
 
+// Execute generate team function
 generateTeam();
