@@ -15,8 +15,11 @@ const createTeam = require("./src/createTeam");
 // team array
 const teamArr = [];
 
-// manager questions
+const generateTeam = () => {
+  input;
+};
 
+// Manager Questions
 const addManager = () => {
   return inquirer
     .prompt([
@@ -50,6 +53,74 @@ const addManager = () => {
     });
 };
 
+// Engineer Questions
+const addEngineer = () => {
+  return inquirer
+    .prompt([
+      {
+        type: "input",
+        name: "engineerName",
+        message: "What is the engineer's name?",
+      },
+      {
+        type: "input",
+        name: "engineerId",
+        message: "What is the engineer's ID?",
+      },
+      {
+        type: "input",
+        name: "engineerEmail",
+        message: "What is the engineer's email?",
+      },
+      {
+        type: "input",
+        name: "engineerGithub",
+        message: "What is the engineer's github?",
+      },
+    ])
+    .then((engineerAnswers) => {
+      const { name, id, email, github } = engineerAnswers;
+      const engineer = new Engineer(name, id, email, github);
+
+      teamArr.push(engineer);
+      console.log(engineer);
+    });
+};
+
+// Intern Questions
+const addIntern = () => {
+  return inquirer
+    .prompt([
+      {
+        type: "input",
+        name: "internName",
+        message: "What is the intern's name?",
+      },
+      {
+        type: "input",
+        name: "internId",
+        message: "What is the intern's ID?",
+      },
+      {
+        type: "input",
+        name: "internEmail",
+        message: "What is the intern's email?",
+      },
+      {
+        type: "input",
+        name: "internSchool",
+        message: "What is the intern's school?",
+      },
+    ])
+    .then((internAnswers) => {
+      const { name, id, email, school } = internAnswers;
+      const intern = new Intern(name, id, email, school);
+
+      teamArr.push(intern);
+      console.log(intern);
+    });
+};
+
 // generate HTML using file system
 const writeFile = (data) => {
   fs.writeFile("./dist/index.html", data, (err) => {
@@ -60,4 +131,5 @@ const writeFile = (data) => {
 };
 
 // execute function
+
 addManager();
