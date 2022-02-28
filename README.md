@@ -105,6 +105,8 @@ In addition to `Employee`'s properties and methods, `Manager` will also have the
 
 - `getRole()`&mdash;overridden to return `'Manager'`
 
+
+
 In addition to `Employee`'s properties and methods, `Engineer` will also have the following:
 
 - `github`&mdash;GitHub username
