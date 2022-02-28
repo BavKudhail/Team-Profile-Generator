@@ -1,5 +1,3 @@
-// import
-
 // team classes
 const Manager = require("./lib/Manager");
 const Intern = require("./lib/Intern");
@@ -10,13 +8,35 @@ const inquirer = require("inquirer");
 const fs = require("fs");
 
 // link to create team HTML file
-const createTeam = require("./src/createTeam");
+const createTeamHTML = require("./src/createTeamHTML");
 
 // team array
 const teamArr = [];
 
+// Generate team function
 const generateTeam = () => {
-  input;
+  return inquirer
+    .prompt([
+      {
+        type: "list",
+        name: "selectEmployee",
+        message: "What employee role would you like to add to your team?",
+        choices: ["Manager", "Engineer", "Intern", "No more employees"],
+      },
+    ])
+    .then((selection) => {
+      const choice = selection.selectEmployee;
+      if (choice === "Manager") {
+        addManager();
+      } else if (choice === "Engineer") {
+        addEngineer();
+      } else if (choice === "Intern") {
+        addIntern();
+      } else {
+        console.log(teamArr);
+        return teamArr;
+      }
+    });
 };
 
 // Manager Questions
@@ -25,31 +45,38 @@ const addManager = () => {
     .prompt([
       {
         type: "input",
-        name: "name",
+        name: "managerName",
         message: "What is the team manager's name?",
       },
       {
         type: "input",
-        name: "id",
+        name: "managerId",
         message: "What is the team manager's Id?",
       },
       {
         type: "input",
-        name: "email",
+        name: "managerEmail",
         message: "What is the team manager's email?",
       },
       {
         type: "input",
-        name: "officeNumber",
+        name: "managerOfficeNumber",
         message: "What is the team manager's office number?",
       },
     ])
     .then((managerAnswers) => {
-      const { name, id, email, officeNumber } = managerAnswers;
-      const manager = new Manager(name, id, email, officeNumber);
+      const { managerName, managerId, managerEmail, managerOfficeNumber } =
+        managerAnswers;
+      const manager = new Manager(
+        managerName,
+        managerId,
+        managerEmail,
+        managerOfficeNumber
+      );
 
       teamArr.push(manager);
       console.log(manager);
+      generateTeam();
     });
 };
 
@@ -79,11 +106,18 @@ const addEngineer = () => {
       },
     ])
     .then((engineerAnswers) => {
-      const { name, id, email, github } = engineerAnswers;
-      const engineer = new Engineer(name, id, email, github);
+      const { engineerName, engineerId, engineerEmail, engineerGithub } =
+        engineerAnswers;
+      const engineer = new Engineer(
+        engineerName,
+        engineerId,
+        engineerEmail,
+        engineerGithub
+      );
 
       teamArr.push(engineer);
       console.log(engineer);
+      generateTeam();
     });
 };
 
@@ -113,11 +147,17 @@ const addIntern = () => {
       },
     ])
     .then((internAnswers) => {
-      const { name, id, email, school } = internAnswers;
-      const intern = new Intern(name, id, email, school);
+      const { internName, internId, internEmail, internSchool } = internAnswers;
+      const intern = new Intern(
+        internName,
+        internId,
+        internEmail,
+        internSchool
+      );
 
       teamArr.push(intern);
       console.log(intern);
+      generateTeam();
     });
 };
 
@@ -130,6 +170,4 @@ const writeFile = (data) => {
   });
 };
 
-// execute function
-
-addManager();
+generateTeam();
