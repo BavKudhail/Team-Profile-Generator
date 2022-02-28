@@ -95,6 +95,10 @@ The first class is an `Employee` parent class with the following properties and 
 
 The other three classes will extend `Employee`.
 
+
+
+
+
 In addition to `Employee`'s properties and methods, `Manager` will also have the following:
 
 - `officeNumber`
