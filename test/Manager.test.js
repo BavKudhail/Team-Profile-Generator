@@ -1,7 +1,3 @@
-const { expect } = require("@jest/globals");
-const { it } = require("jest-circus");
-const { any } = require("micromatch");
-const { describe } = require("yargs");
 const Manager = require("../lib/Manager");
 
 // testing create manager object
