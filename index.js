@@ -7,6 +7,10 @@ const Engineer = require("./lib/Engineer");
 const inquirer = require("inquirer");
 const fs = require("fs");
 
+// output paths
+const path = require("path");
+const outputDir = path.resolve(__dirname, "dist");
+const outputPath = path.join(outputDir, "theTeam.html");
 // link to create team HTML file
 const createTeamHTML = require("./src/createTeamHTML");
 
@@ -21,7 +25,7 @@ const generateTeam = () => {
         type: "list",
         name: "selectEmployee",
         message: "What employee role would you like to add to your team?",
-        choices: ["Manager", "Engineer", "Intern", "No more employees"],
+        choices: ["Manager", "Engineer", "Intern", "No more"],
       },
     ])
     .then((selection) => {
@@ -34,7 +38,7 @@ const generateTeam = () => {
         addIntern();
       } else {
         console.log(teamArr);
-        return teamArr;
+        return createHTML();
       }
     });
 };
@@ -161,13 +165,10 @@ const addIntern = () => {
     });
 };
 
-// generate HTML using file system
-const writeFile = (data) => {
-  fs.writeFile("./dist/index.html", data, (err) => {
-    err
-      ? console.log("Oops, there was an error" + err)
-      : console.log("Successfully generated team HTML file");
-  });
-};
+// Create HTML
+function createHTML() {
+  console.log("Team created");
+  fs.writeFileSync(outputPath, createTeamHTML(teamArr), "utf-8");
+}
 
 generateTeam();
