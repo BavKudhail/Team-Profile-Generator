@@ -77,9 +77,9 @@ It is recommended that you start with a directory structure that looks like the 
 
 The application must include `Employee`, `Manager`, `Engineer`, and `Intern` classes. The tests for these classes (in the `_tests_` directory) must ALL pass.
 
-The first class is an `Employee` parent class with the following properties and methods:
+The first class is an `Employee` parent class with the following properties and methods: ✅
 
-- `name`
+- `name` 
 
 - `id`
 
@@ -99,7 +99,7 @@ The other three classes will extend `Employee`.
 
 
 
-In addition to `Employee`'s properties and methods, `Manager` will also have the following:
+In addition to `Employee`'s properties and methods, `Manager` will also have the following: ✅
 
 - `officeNumber`
 
@@ -107,7 +107,7 @@ In addition to `Employee`'s properties and methods, `Manager` will also have the
 
 
 
-In addition to `Employee`'s properties and methods, `Engineer` will also have the following:
+In addition to `Employee`'s properties and methods, `Engineer` will also have the following: ✅
 
 - `github`&mdash;GitHub username
 
@@ -117,7 +117,7 @@ In addition to `Employee`'s properties and methods, `Engineer` will also have th
 
 
 
-In addition to `Employee`'s properties and methods, `Intern` will also have the following:
+In addition to `Employee`'s properties and methods, `Intern` will also have the following: ✅
 
 - `school`
 
