@@ -16,3 +16,32 @@ body {
 .bg-pink {
   background-color: #f8f1ff;
 }
+.rounded-30 {
+  border-radius: 40px;
+}
+.card-circle-purple {
+  width: 180px;
+  height: 180px;
+  background-color: #e9d8ff;
+}
+
+.card-circle-pink {
+  width: 180px;
+  height: 180px;
+  background-color: #ffd8fc;
+}
+
+.card-circle-blue {
+  width: 180px;
+  height: 180px;
+  background-color: #d8e9ff;
+}
+
+.expand {
+  transition: all 0.3s ease-in-out;
+}
+
+.expand:hover {
+  transform: scale(1.05);
+  transition: all 0.3s ease-in-out;
+}
