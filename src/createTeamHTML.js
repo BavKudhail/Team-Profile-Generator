@@ -1,13 +1,15 @@
+const { number } = require("yargs");
+
 const createManager = (manager) => {
   return `
   <div class="flex justify-center m-5 expand">
-        <div class="rounded-30 shadow-lg bg-white max-w-sm p-8">
+        <div class="rounded-30 shadow-lg bg-white max-w-sm p-8 card-min-width">
           <!-- circle -->
           <div class="flex justify-center pb-5">
             <div class="rounded-full card-circle-pink">
               <img
                 class="justify-center"
-                src="#"
+                src="../assets/images/memoji-5.png"
                 alt=""
               />
             </div>
@@ -45,17 +47,16 @@ const createManager = (manager) => {
   `;
 };
 
-
 const createEngineer = (engineer) => {
   return `
     <div class="flex justify-center m-5 expand">
-        <div class="rounded-30 shadow-lg bg-white max-w-sm p-8">
+        <div class="rounded-30 shadow-lg bg-white max-w-sm p-8 card-min-width">
           <!-- circle -->
           <div class="flex justify-center pb-5">
             <div class="rounded-full card-circle-purple">
               <img
                 class="justify-center"
-                src="#"
+                src="../assets/images/memoji-3.png"
                 alt=""
               />
             </div>
@@ -95,13 +96,52 @@ const createEngineer = (engineer) => {
     `;
 };
 
-// create intern card
 const createIntern = (intern) => {
   return `
-    <h3>Intern Name: ${intern.name} </h3>
-    <h3>Intern ID: ${intern.id}</h3>
-    <h3>Intern Email: ${intern.email} </h3>
-    <h3>Intern School: ${intern.school} </h3>
+    <div class="flex justify-center m-5 expand">
+        <div class="rounded-30 shadow-lg bg-white max-w-sm p-8 card-min-width">
+          <!-- circle -->
+          <div class="flex justify-center pb-5">
+            <div class="rounded-full card-circle-blue">
+              <img
+                class="justify-center"
+                src="../assets/images/memoji-6.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <h5 class="text-gray-900 text-xl font-bold mb-2 text-center">
+            ${intern.name}
+          </h5>
+          <p
+            class="text-white bg-sky-500 font-bold rounded-full mx-5 px-5 py-2.5 text-center mb-2 purple-glow"
+          >
+            Intern
+          </p>
+          <!-- container -->
+          <div class="pt-4">
+            <!-- id -->
+            <div class="flex justify-between my-1">
+              <p class="font-bold text-base">ID</p>
+              <p class="font-bold text-gray-500 text-sm pl-8">${intern.id}</p>
+            </div>
+            <!-- email -->
+            <div class="flex justify-between my-1">
+              <p class="font-bold text-base">Email</p>
+              <p class="font-bold text-gray-500 text-sm pl-8">
+                ${intern.email}
+              </p>
+            </div>
+            <!-- school -->
+            <div class="flex justify-between my-1">
+              <p class="font-bold text-base">School</p>
+              <p class="font-bold text-gray-500 text-sm pl-8">
+                ${intern.school}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     `;
 };
 
@@ -128,12 +168,14 @@ createTeamHTML = (data) => {
 
   const employeeCards = pageArray.join("");
 
-  const generateTeam = generateTeamPage(employeeCards);
+  const number = data.length;
+
+  const generateTeam = generateTeamPage(employeeCards, number);
   return generateTeam;
 };
 
 // generate HTML page
-const generateTeamPage = function (cards) {
+const generateTeamPage = function (cards, number) {
   return ` 
   <!DOCTYPE html>
 <html lang="en">
@@ -152,7 +194,7 @@ const generateTeamPage = function (cards) {
     </div>
     <div class="flex-col text-center">
       <h2 class="text-5xl font-bold mb-5">
-        We are a team of <span class="text-rose-500">4</span> passionate
+        We are a team of <span class="text-rose-500">${number}</span> passionate
         creators.
       </h2>
       <h3 class="text-xl font-medium mb-10">
