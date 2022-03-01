@@ -1,13 +1,3 @@
-// create manager card
-// const createManager = (manager) => {
-//   return `
-//     <h3>Manager Name: ${manager.name} </h3>
-//     <h3>Manager ID: ${manager.id}</h3>
-//     <h3>Manager Email: ${manager.email} </h3>
-//     <h3>Manager Office Number: ${manager.officeNumber} </h3>
-//     `;
-// };
-
 const createManager = (manager) => {
   return `
   <div class="flex justify-center m-5 expand">
@@ -55,13 +45,53 @@ const createManager = (manager) => {
   `;
 };
 
-// create engineer card
+
 const createEngineer = (engineer) => {
   return `
-    <h3>Engineer Name: ${engineer.name} </h3>
-    <h3>Engineer ID: ${engineer.id}</h3>
-    <h3>Engineer Email: ${engineer.email} </h3>
-    <h3>Engineer Github: ${engineer.github} </h3>
+    <div class="flex justify-center m-5 expand">
+        <div class="rounded-30 shadow-lg bg-white max-w-sm p-8">
+          <!-- circle -->
+          <div class="flex justify-center pb-5">
+            <div class="rounded-full card-circle-purple">
+              <img
+                class="justify-center"
+                src="#"
+                alt=""
+              />
+            </div>
+          </div>
+          <h5 class="text-gray-900 text-xl font-bold mb-2 text-center">
+            ${engineer.name}
+          </h5>
+          <p
+            class="text-white bg-purple-700 font-bold rounded-full mx-5 px-5 py-2.5 text-center mb-2 purple-glow"
+          >
+            Engineer
+          </p>
+          <!-- container -->
+          <div class="pt-4">
+            <!-- id -->
+            <div class="flex justify-between my-1">
+              <p class="font-bold text-base">ID</p>
+              <p class="font-bold text-gray-500 text-sm pl-8">${engineer.id}</p>
+            </div>
+            <!-- email -->
+            <div class="flex justify-between my-1">
+              <p class="font-bold text-base">Email</p>
+              <p class="font-bold text-gray-500 text-sm pl-8">
+                ${engineer.email}
+              </p>
+            </div>
+            <!-- github -->
+            <div class="flex justify-between my-1">
+              <p class="font-bold text-base">Github</p>
+              <p class="font-bold text-gray-500 text-sm pl-8">
+                ${engineer.github}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     `;
 };
 
