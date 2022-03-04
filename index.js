@@ -123,21 +123,51 @@ const addEngineer = () => {
         type: "input",
         name: "engineerName",
         message: "What is the engineer's name?",
+        validate: (input) => {
+          if (!input) {
+            return "please enter the engineers name";
+          } else {
+            return true;
+          }
+        },
       },
       {
         type: "input",
         name: "engineerId",
         message: "What is the engineer's ID?",
+        validate: (input) => {
+          if (isNaN(input)) {
+            return "please enter a number";
+          } else {
+            return true;
+          }
+        },
       },
       {
         type: "input",
         name: "engineerEmail",
         message: "What is the engineer's email?",
+        validate: (email) => {
+          valid = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email);
+          if (!valid) {
+            return "please enter an email";
+          } else {
+            return true;
+          }
+        },
       },
       {
         type: "input",
         name: "engineerGithub",
         message: "What is the engineer's github?",
+        default: "github.com/username",
+        validate: (github) => {
+          if (!github) {
+            return "Please enter your github";
+          } else {
+            return true;
+          }
+        },
       },
     ])
     .then((engineerAnswers) => {
@@ -164,21 +194,51 @@ const addIntern = () => {
         type: "input",
         name: "internName",
         message: "What is the intern's name?",
+        validate: (input) => {
+          if (!input) {
+            return "please enter the intern's name";
+          } else {
+            return true;
+          }
+        },
       },
       {
         type: "input",
         name: "internId",
         message: "What is the intern's ID?",
+        validate: (input) => {
+          if (isNaN(input) || input === "") {
+            return "please enter a number";
+          } else {
+            return true;
+          }
+        },
       },
       {
         type: "input",
         name: "internEmail",
         message: "What is the intern's email?",
+        validate: (email) => {
+          valid = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email);
+          if (!valid) {
+            return "please enter an email";
+          } else {
+            return true;
+          }
+        },
       },
       {
         type: "input",
         name: "internSchool",
         message: "What is the intern's school?",
+        validate: (school) => {
+          if (!school) {
+            console.log("please enter your school");
+            return false;
+          } else {
+            return true;
+          }
+        },
       },
     ])
     .then((internAnswers) => {
