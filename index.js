@@ -86,6 +86,12 @@ const addManager = () => {
         },
       },
       {
+        type: "list",
+        name: "managerAvatar",
+        message: "Please select your avatar?",
+        choices: ["male1", "male2", "male3", "female1", "female2", "female3"],
+      },
+      {
         type: "input",
         name: "managerOfficeNumber",
         message: "What is the team manager's office number?",
@@ -100,12 +106,18 @@ const addManager = () => {
       },
     ])
     .then((managerAnswers) => {
-      const { managerName, managerId, managerEmail, managerOfficeNumber } =
-        managerAnswers;
+      const {
+        managerName,
+        managerId,
+        managerEmail,
+        managerAvatar,
+        managerOfficeNumber,
+      } = managerAnswers;
       const manager = new Manager(
         managerName,
         managerId,
         managerEmail,
+        managerAvatar,
         managerOfficeNumber
       );
 

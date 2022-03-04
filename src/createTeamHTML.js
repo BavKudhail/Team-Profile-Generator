@@ -1,6 +1,7 @@
 const { number } = require("yargs");
 
 const createManager = (manager) => {
+  console.log(manager);
   return `
   <div class="flex justify-center m-5 expand">
         <div class="rounded-30 shadow-lg bg-white max-w-sm p-8 card-min-width">
@@ -9,7 +10,7 @@ const createManager = (manager) => {
             <div class="rounded-full card-circle-pink">
               <img
                 class="justify-center"
-                src="../assets/images/memoji-5.png"
+                src="../assets/images/${manager.avatar}.png"
                 alt=""
               />
             </div>
