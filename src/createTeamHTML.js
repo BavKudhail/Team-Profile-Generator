@@ -1,5 +1,3 @@
-const { number } = require("yargs");
-
 const createManager = (manager) => {
   console.log(manager);
   return `
