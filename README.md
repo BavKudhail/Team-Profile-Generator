@@ -1,9 +1,5 @@
 # 10 Object-Oriented Programming: Team Profile Generator
 
-![Document (2)](https://user-images.githubusercontent.com/93915846/156842303-3963c0c3-79ef-41f3-9278-a337a8109075.gif)
-
-
-
 ## The Goal
 
 Build a Node.js command-line application that takes in information about employees on a software engineering team, then generates an HTML webpage that displays summaries for each person.
@@ -16,12 +12,16 @@ I WANT to generate a webpage that displays my team's basic info
 SO THAT I have quick access to their emails and GitHub profiles
 ```
 
+## Screenshot
+
+![Document (2)](https://user-images.githubusercontent.com/93915846/156842303-3963c0c3-79ef-41f3-9278-a337a8109075.gif)
+
+
 ## Table of Contents
 
 - [Technologies Used](#technologies-used)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Screenshot](#screenshots)
 - [Walkthrough](#walkthrough)
 - [Questions](#questions)
 
@@ -66,10 +66,6 @@ node index.js
 ```
 To use the generator simply type node index.js in the terminal and follow the prompts
 ```
-
-## Screenshot
-
-![terminal screenshot](https://raw.githubusercontent.com/BavKudhail/Read-Me-Generator/main/assets/images/screenshot.JPG)
 
 [Click here to view a generated sample](https://github.com/BavKudhail/Read-Me-Generator/blob/main/sampleREADME.md)
 
