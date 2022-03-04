@@ -34,7 +34,7 @@ const createManager = (manager) => {
             <div class="flex justify-between my-1">
               <p class="font-bold text-base">Email</p>
               <p class="font-bold text-gray-500 text-sm pl-8">
-                ${manager.email}
+              <a href="mailto:${manager.email}">${manager.email}</a>
               </p>
             </div>
             <!-- office number -->
@@ -57,7 +57,7 @@ const createEngineer = (engineer) => {
             <div class="rounded-full card-circle-purple">
               <img
                 class="justify-center"
-                src="../assets/images/memoji-3.png"
+                src="../assets/images/${engineer.avatar}.png"
                 alt=""
               />
             </div>
@@ -81,14 +81,14 @@ const createEngineer = (engineer) => {
             <div class="flex justify-between my-1">
               <p class="font-bold text-base">Email</p>
               <p class="font-bold text-gray-500 text-sm pl-8">
-                ${engineer.email}
+                 <a href="mailto:${engineer.email}">${engineer.email}</a>
               </p>
             </div>
             <!-- github -->
             <div class="flex justify-between my-1">
               <p class="font-bold text-base">Github</p>
               <p class="font-bold text-gray-500 text-sm pl-8">
-                ${engineer.github}
+                <a href="https://github.com/${engineer.github}">${engineer.github}</a>
               </p>
             </div>
           </div>
@@ -106,7 +106,7 @@ const createIntern = (intern) => {
             <div class="rounded-full card-circle-blue">
               <img
                 class="justify-center"
-                src="../assets/images/memoji-6.png"
+                src="../assets/images/${intern.avatar}.png"
                 alt=""
               />
             </div>
@@ -130,7 +130,7 @@ const createIntern = (intern) => {
             <div class="flex justify-between my-1">
               <p class="font-bold text-base">Email</p>
               <p class="font-bold text-gray-500 text-sm pl-8">
-                ${intern.email}
+                <a href="mailto:${intern.email}">${intern.email}</a>
               </p>
             </div>
             <!-- school -->

@@ -169,6 +169,12 @@ const addEngineer = () => {
         },
       },
       {
+        type: "list",
+        name: "engineerAvatar",
+        message: "Please select your avatar?",
+        choices: ["male1", "male2", "male3", "female1", "female2", "female3"],
+      },
+      {
         type: "input",
         name: "engineerGithub",
         message: "What is the engineer's github?",
@@ -183,12 +189,18 @@ const addEngineer = () => {
       },
     ])
     .then((engineerAnswers) => {
-      const { engineerName, engineerId, engineerEmail, engineerGithub } =
-        engineerAnswers;
+      const {
+        engineerName,
+        engineerId,
+        engineerEmail,
+        engineerAvatar,
+        engineerGithub,
+      } = engineerAnswers;
       const engineer = new Engineer(
         engineerName,
         engineerId,
         engineerEmail,
+        engineerAvatar,
         engineerGithub
       );
 
@@ -240,6 +252,12 @@ const addIntern = () => {
         },
       },
       {
+        type: "list",
+        name: "internAvatar",
+        message: "Please select your avatar?",
+        choices: ["male1", "male2", "male3", "female1", "female2", "female3"],
+      },
+      {
         type: "input",
         name: "internSchool",
         message: "What is the intern's school?",
@@ -254,11 +272,13 @@ const addIntern = () => {
       },
     ])
     .then((internAnswers) => {
-      const { internName, internId, internEmail, internSchool } = internAnswers;
+      const { internName, internId, internEmail, internAvatar, internSchool } =
+        internAnswers;
       const intern = new Intern(
         internName,
         internId,
         internEmail,
+        internAvatar,
         internSchool
       );
 
