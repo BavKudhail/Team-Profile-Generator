@@ -52,21 +52,51 @@ const addManager = () => {
         type: "input",
         name: "managerName",
         message: "What is the team manager's name?",
+        validate: (input) => {
+          if (!input) {
+            return "please enter the managers name";
+          } else {
+            return true;
+          }
+        },
       },
       {
         type: "input",
         name: "managerId",
         message: "What is the team manager's Id?",
+        validate: (input) => {
+          if (isNaN(input)) {
+            return "please enter a number";
+          } else {
+            return true;
+          }
+        },
       },
       {
         type: "input",
         name: "managerEmail",
         message: "What is the team manager's email?",
+        validate: (email) => {
+          valid = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email);
+          if (!valid) {
+            return "please enter an email";
+          } else {
+            return true;
+          }
+        },
       },
       {
         type: "input",
         name: "managerOfficeNumber",
         message: "What is the team manager's office number?",
+        validate: (officeNum) => {
+          if (isNaN(officeNum)) {
+            console.log("Please enter an office number");
+            return false;
+          } else {
+            return true;
+          }
+        },
       },
     ])
     .then((managerAnswers) => {

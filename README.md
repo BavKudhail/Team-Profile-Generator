@@ -56,8 +56,8 @@ Your application should use [Jest](https://www.npmjs.com/package/jest) for runni
 node index.js
 ```
 
-It is recommended that you start with a directory structure that looks like the following example:
-
+It is recommended that you start with a directory structure that looks like the following example: ✅
+ 
 ```md
 .
 ├── **tests**/ //jest tests
@@ -93,7 +93,7 @@ The first class is an `Employee` parent class with the following properties and 
 
 - `getRole()`&mdash;returns `'Employee'`
 
-The other three classes will extend `Employee`.
+The other three classes will extend `Employee`. 
 
 
 
@@ -135,13 +135,13 @@ This homework is graded based on the following criteria:
 
 ### Deliverables: 15%
 
-- A sample HTML file generated using the application must be submitted.
+- A sample HTML file generated using the application must be submitted. ✅
 
-- Your GitHub repository containing your application code.
+- Your GitHub repository containing your application code. ✅
 
 ### Walkthrough Video: 32%
 
-- A walkthrough video that demonstrates the functionality of the Team Profile Generator and passing tests must be submitted, and a link to the video should be included in your README file.
+- A walkthrough video that demonstrates the functionality of the Team Profile Generator and passing tests must be submitted, and a link to the video should be included in your README file. 
 
 - The walkthrough video must show all four tests passing from the command line.
 
@@ -155,33 +155,33 @@ This homework is graded based on the following criteria:
 
 - Satisfies all of the preceding acceptance criteria plus the following:
 
-  - Uses the [Inquirer package](https://www.npmjs.com/package/inquirer).
+  - Uses the [Inquirer package](https://www.npmjs.com/package/inquirer). ✅
 
-  - Uses the [Jest package](https://www.npmjs.com/package/jest) for a suite of unit tests.
+  - Uses the [Jest package](https://www.npmjs.com/package/jest) for a suite of unit tests. ✅
 
-  - The application must have `Employee`, `Manager`, `Engineer`, and `Intern` classes.
+  - The application must have `Employee`, `Manager`, `Engineer`, and `Intern` classes. ✅
 
 ### Repository Quality: 13%
 
-- Repository has a unique name.
+- Repository has a unique name. ✅
 
-- Repository follows best practices for file structure and naming conventions.
+- Repository follows best practices for file structure and naming conventions. ✅
 
-- Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
+- Repository follows best practices for class/id naming conventions, indentation, quality comments, etc. ✅
 
-- Repository contains multiple descriptive commit messages.
-
-- Repository contains a high-quality readme with description and a link to a walkthrough video.
+- Repository contains multiple descriptive commit messages. ✅
+ 
+- Repository contains a high-quality readme with description and a link to a walkthrough video. 
 
 ## Review
 
 You are required to submit the following for review:
 
-- A walkthrough video that demonstrates the functionality of the application and passing tests.
+- A walkthrough video that demonstrates the functionality of the application and passing tests. ✅
 
-- A sample HTML file generated using your application.
+- A sample HTML file generated using your application. ✅
 
-- The URL of the GitHub repository, with a unique name and a readme describing the project.
+- The URL of the GitHub repository, with a unique name and a readme describing the project. ✅
 
 ---
 
