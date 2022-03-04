@@ -209,17 +209,13 @@ const addEmployee = () => {
         officeNum,
         confirmAddEmployees,
       } = employeeInfo;
-      console.log("here is the employee info: " + employeeInfo);
       let employee;
       if (role === "Engineer") {
         employee = new Engineer(name, id, email, avatar, github);
-        console.log(employee);
       } else if (role === "Intern") {
         employee = new Intern(name, id, email, avatar, school);
-        console.log(employee);
       } else if (role === "Manager") {
         employee = new Manager(name, id, email, avatar, officeNum);
-        console.log(employee);
       }
       teamArr.push(employee);
 

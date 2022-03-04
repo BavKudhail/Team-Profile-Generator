@@ -1,7 +1,13 @@
 const Intern = require("../lib/Intern");
 
 test("creating new intern object", () => {
-  const intern = new Intern("Bav", "1996", "bavkudhail@gmail.com", "MIT");
+  const intern = new Intern(
+    "Bav",
+    "1996",
+    "bavkudhail@gmail.com",
+    "male1",
+    "MIT"
+  );
   //   intern name
   expect(intern.name).toBe("Bav");
   //   intern ID
