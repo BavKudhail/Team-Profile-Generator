@@ -12,9 +12,9 @@ I WANT to generate a webpage that displays my team's basic info
 SO THAT I have quick access to their emails and GitHub profiles
 ```
 
-📷 :camera:
 
-## Screenshot
+
+## 📷 Screenshot
 
 ![Document (2)](https://user-images.githubusercontent.com/93915846/156842303-3963c0c3-79ef-41f3-9278-a337a8109075.gif)
 
