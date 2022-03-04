@@ -1,20 +1,89 @@
 # 10 Object-Oriented Programming: Team Profile Generator
 
-## Your Task
+## The Goal
 
-Your task is to build a Node.js command-line application that takes in information about employees on a software engineering team, then generates an HTML webpage that displays summaries for each person. Testing is key to making code maintainable, so you’ll also write a unit test for every part of your code and ensure that it passes each test.
+Build a Node.js command-line application that takes in information about employees on a software engineering team, then generates an HTML webpage that displays summaries for each person.
+
+## User Story
+
+```
+AS A manager:
+I WANT to generate a webpage that displays my team's basic info
+SO THAT I have quick access to their emails and GitHub profiles
+```
+
+## Table of Contents
+
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Screenshot](#screenshots)
+- [Walkthrough](#walkthrough)
+- [Questions](#questions)
+
+## Technologies Used
+
+- HTML
+- CSS
+- Tailwind CSS
+- Javascript
+- Inquirer
+- Node.JS
+- Jest
+
+## Installation
+
+1. Clone the repository
+
+```
+https://github.com/BavKudhail/Team-Profile-Generator.git
+```
+
+2. Change the working directory
+
+```
+cd team-profile-generator
+```
+
+4. Install dependencies
+
+```
+npm i
+```
+
+6. Run the app
+
+```
+node index.js
+```
+
+## Usage
+
+```
+To use the generator simply type node index.js in the terminal and follow the prompts
+```
+
+## Screenshot
+
+![terminal screenshot](https://raw.githubusercontent.com/BavKudhail/Read-Me-Generator/main/assets/images/screenshot.JPG)
+
+[Click here to view a generated sample](https://github.com/BavKudhail/Read-Me-Generator/blob/main/sampleREADME.md)
+
+## Walkthrough
+
+https://user-images.githubusercontent.com/93915846/155854603-056e4ccb-589e-4c17-ba03-c71c40e418d0.mp4
+
+## Questions
+
+If you have any questions about this project please feel free to email me @ bavkudhail@gmail.com. You can also view more of my projects here https://www.github.com/bavkudhail
+
+## Your Task
 
 Because this application won’t be deployed, you’ll need to provide a link to a walkthrough video that demonstrates its functionality and all of the tests passing. You’ll need to submit a link to the video AND add it to the readme of your project.
 
 > **Note**: There is no starter code for this assignment.
 
 ## User Story
-
-```md
-AS A manager
-I WANT to generate a webpage that displays my team's basic info
-SO THAT I have quick access to their emails and GitHub profiles
-```
 
 ## Acceptance Criteria
 
@@ -30,19 +99,17 @@ WHEN I click on the GitHub username
 THEN that GitHub profile opens in a new tab ✅
 
 WHEN I start the application
-THEN I am prompted to enter the team manager’s name, employee ID, email address, and office number 
+THEN I am prompted to enter the team manager’s name, employee ID, email address, and office number
 
 WHEN I enter the team manager’s name, employee ID, email address, and office number
 THEN I am presented with a menu with the option to add an engineer or an intern or to finish building my team
 
 WHEN I select the engineer option
 THEN I am prompted to enter the engineer’s name, ID, email, and GitHub username, and I am taken back to the menu ✅
-
 WHEN I select the intern option
-THEN I am prompted to enter the intern’s name, ID, email, and school, and I am taken back to the menu ✅
-
+THEN I am prompted to enter the intern’s name, ID, email, and school, and I am taken back to the menu
 WHEN I decide to finish building my team
-THEN I exit the application, and the HTML is generated ✅
+THEN I exit the application, and the HTML is generated
 ```
 
 ## Mock-Up
@@ -64,7 +131,7 @@ node index.js
 ```
 
 It is recommended that you start with a directory structure that looks like the following example: ✅
- 
+
 ```md
 .
 ├── **tests**/ //jest tests
@@ -86,7 +153,7 @@ The application must include `Employee`, `Manager`, `Engineer`, and `Intern` cla
 
 The first class is an `Employee` parent class with the following properties and methods: ✅
 
-- `name` 
+- `name`
 
 - `id`
 
@@ -100,19 +167,13 @@ The first class is an `Employee` parent class with the following properties and 
 
 - `getRole()`&mdash;returns `'Employee'`
 
-The other three classes will extend `Employee`. 
-
-
-
-
+The other three classes will extend `Employee`.
 
 In addition to `Employee`'s properties and methods, `Manager` will also have the following: ✅
 
 - `officeNumber`
 
 - `getRole()`&mdash;overridden to return `'Manager'`
-
-
 
 In addition to `Employee`'s properties and methods, `Engineer` will also have the following: ✅
 
@@ -121,8 +182,6 @@ In addition to `Employee`'s properties and methods, `Engineer` will also have th
 - `getGithub()`
 
 - `getRole()`&mdash;overridden to return `'Engineer'`
-
-
 
 In addition to `Employee`'s properties and methods, `Intern` will also have the following: ✅
 
@@ -133,8 +192,6 @@ In addition to `Employee`'s properties and methods, `Intern` will also have the 
 - `getRole()`&mdash;overridden to return `'Intern'`
 
 Finally, although it’s not a requirement, consider adding validation to ensure that user input is in the proper format.
-
-
 
 ## Grading Requirements
 
@@ -148,7 +205,7 @@ This homework is graded based on the following criteria:
 
 ### Walkthrough Video: 32%
 
-- A walkthrough video that demonstrates the functionality of the Team Profile Generator and passing tests must be submitted, and a link to the video should be included in your README file. 
+- A walkthrough video that demonstrates the functionality of the Team Profile Generator and passing tests must be submitted, and a link to the video should be included in your README file.
 
 - The walkthrough video must show all four tests passing from the command line.
 
@@ -177,8 +234,8 @@ This homework is graded based on the following criteria:
 - Repository follows best practices for class/id naming conventions, indentation, quality comments, etc. ✅
 
 - Repository contains multiple descriptive commit messages. ✅
- 
-- Repository contains a high-quality readme with description and a link to a walkthrough video. 
+
+- Repository contains a high-quality readme with description and a link to a walkthrough video.
 
 ## Review
 
@@ -195,4 +252,5 @@ You are required to submit the following for review:
 © 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
 
 ## Test
+
 ![Document](https://user-images.githubusercontent.com/93915846/156169380-e5ea451b-37ce-462b-9557-edb8bfdd9c80.gif)

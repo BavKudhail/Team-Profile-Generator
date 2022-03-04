@@ -1,7 +1,7 @@
 const createManager = (manager) => {
   console.log(manager);
   return `
-  <div class="flex justify-center m-5 expand">
+  <div class="flex justify-center m-5 expand rounded-30 glow">
         <div class="rounded-30 shadow-lg bg-white max-w-sm p-8 card-min-width">
           <!-- circle -->
           <div class="flex justify-center pb-5">
@@ -48,7 +48,7 @@ const createManager = (manager) => {
 
 const createEngineer = (engineer) => {
   return `
-    <div class="flex justify-center m-5 expand">
+    <div class="flex justify-center m-5 expand rounded-30 glow">
         <div class="rounded-30 shadow-lg bg-white max-w-sm p-8 card-min-width">
           <!-- circle -->
           <div class="flex justify-center pb-5">
@@ -97,7 +97,7 @@ const createEngineer = (engineer) => {
 
 const createIntern = (intern) => {
   return `
-    <div class="flex justify-center m-5 expand">
+    <div class="flex justify-center m-5 expand rounded-30 glow">
         <div class="rounded-30 shadow-lg bg-white max-w-sm p-8 card-min-width">
           <!-- circle -->
           <div class="flex justify-center pb-5">
