@@ -69,11 +69,11 @@ node index.js
 To use the generator simply type node index.js in the terminal and follow the prompts
 ```
 
-[Click here to view a generated sample](https://github.com/BavKudhail/Read-Me-Generator/blob/main/sampleREADME.md)
-
 ## Walkthrough
+https://user-images.githubusercontent.com/93915846/156896444-ca1b4a10-4b1e-4892-9c97-664d108c4326.mp4
 
-https://user-images.githubusercontent.com/93915846/155854603-056e4ccb-589e-4c17-ba03-c71c40e418d0.mp4
+
+
 
 ## Questions
 
