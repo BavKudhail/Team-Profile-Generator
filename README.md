@@ -15,8 +15,8 @@ SO THAT I have quick access to their emails and GitHub profiles
 
 
 ## 📷 Screenshot
+![Document (1)](https://user-images.githubusercontent.com/93915846/158027560-36d0aaa4-a298-4abc-93d8-c516fc5fb0a6.gif)
 
-![Document (2)](https://user-images.githubusercontent.com/93915846/156842303-3963c0c3-79ef-41f3-9278-a337a8109075.gif)
 
 
 ## Table of Contents
