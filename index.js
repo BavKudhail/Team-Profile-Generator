@@ -7,6 +7,16 @@ const Engineer = require("./lib/Engineer");
 const inquirer = require("inquirer");
 const fs = require("fs");
 
+// deployment
+
+// node modules
+const PORT = process.env.PORT || 5000;
+
+// listen for sever
+app.listen(PORT, () => {
+  console.log(`Server started on port ${PORT}`);
+});
+
 // link to create team HTML file
 const createTeamHTML = require("./src/createTeamHTML");
 
