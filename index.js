@@ -9,9 +9,6 @@ const fs = require("fs");
 
 // deployment
 
-// node modules
-const PORT = process.env.PORT || 5000;
-
 // listen for sever
 app.listen(PORT, () => {
   console.log(`Server started on port ${PORT}`);
