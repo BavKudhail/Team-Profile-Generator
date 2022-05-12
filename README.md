@@ -1,4 +1,4 @@
-# 10 Object-Oriented Programming: Team Profile Generator
+# Team Profile Generator
 
 ## The Goal
 
